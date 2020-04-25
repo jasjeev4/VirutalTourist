@@ -354,12 +354,12 @@ class HomeViewController: UIViewController, MKMapViewDelegate {
         var region: MKCoordinateRegion?
         let lat = UserDefaults.standard.value(forKey: Keys.latitude)
         let long = UserDefaults.standard.value(forKey: Keys.longitude)
-        var lat_dd = 250.00
+        var lat_dd = 50.00
         if let latdd = UserDefaults.standard.value(forKey: Keys.latitudeDelta) {
             lat_dd = latdd as! Double
         }
         // print("latdd \(latdd)")
-        var lt_dd = 250.00
+        var lt_dd = 50.00
         if let longdd = UserDefaults.standard.value(forKey: Keys.longitudeDelta) {
             lt_dd = longdd as! Double
         }
