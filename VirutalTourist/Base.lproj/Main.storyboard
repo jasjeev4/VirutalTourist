@@ -48,9 +48,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ubU-qZ-mO6">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ubU-qZ-mO6">
                                 <rect key="frame" x="0.0" y="325" width="414" height="527"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nLa-VA-d4e">
                                     <size key="itemSize" width="128" height="128"/>
@@ -88,13 +87,14 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sxW-5d-mKW">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sxW-5d-mKW">
                                 <rect key="frame" x="0.0" y="44" width="414" height="285"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="285" id="feN-2q-1z3"/>
+                                </constraints>
                             </mapView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vek-hk-xkQ">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vek-hk-xkQ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="hGf-9I-3jm">
                                         <barButtonItem key="leftBarButtonItem" title="OK" image="chevron.left" catalog="system" id="a35-xh-nik">
@@ -105,9 +105,11 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S0j-wx-Xru">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0j-wx-Xru">
                                 <rect key="frame" x="0.0" y="852" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="xbN-4l-5Is"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="bce-AX-rbV"/>
                                     <barButtonItem title="NEW COLLECTION" id="FdM-AQ-wVs">
@@ -120,6 +122,21 @@
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ubU-qZ-mO6" firstAttribute="top" secondItem="Pxx-5X-7Eq" secondAttribute="top" constant="237" id="23y-0g-aCs"/>
+                            <constraint firstItem="S0j-wx-Xru" firstAttribute="trailing" secondItem="ubU-qZ-mO6" secondAttribute="trailing" id="2u8-nz-BEp"/>
+                            <constraint firstItem="S0j-wx-Xru" firstAttribute="leading" secondItem="vek-hk-xkQ" secondAttribute="leading" id="6Ru-N4-pq8"/>
+                            <constraint firstItem="sxW-5d-mKW" firstAttribute="top" secondItem="vek-hk-xkQ" secondAttribute="bottom" id="LJM-cI-KOL"/>
+                            <constraint firstItem="ubU-qZ-mO6" firstAttribute="trailing" secondItem="Pxx-5X-7Eq" secondAttribute="trailing" id="N3n-cE-Pmk"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="S0j-wx-Xru" secondAttribute="bottom" constant="-34" id="NC4-Qx-NRX"/>
+                            <constraint firstItem="S0j-wx-Xru" firstAttribute="leading" secondItem="ubU-qZ-mO6" secondAttribute="leading" id="Nkh-gq-cOI"/>
+                            <constraint firstItem="S0j-wx-Xru" firstAttribute="trailing" secondItem="vek-hk-xkQ" secondAttribute="trailing" id="Z6X-7R-sDW"/>
+                            <constraint firstItem="S0j-wx-Xru" firstAttribute="trailing" secondItem="sxW-5d-mKW" secondAttribute="trailing" id="b1S-lD-M6J"/>
+                            <constraint firstItem="S0j-wx-Xru" firstAttribute="top" secondItem="ubU-qZ-mO6" secondAttribute="bottom" id="icy-at-C0c"/>
+                            <constraint firstItem="S0j-wx-Xru" firstAttribute="leading" secondItem="sxW-5d-mKW" secondAttribute="leading" id="lfA-oG-sUh"/>
+                            <constraint firstItem="sxW-5d-mKW" firstAttribute="top" secondItem="5Ra-hZ-GXP" secondAttribute="top" constant="44" id="vno-gY-Xue"/>
+                            <constraint firstItem="ubU-qZ-mO6" firstAttribute="leading" secondItem="Pxx-5X-7Eq" secondAttribute="leading" id="yzZ-g1-VyV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Pxx-5X-7Eq"/>
                     </view>
                     <navigationItem key="navigationItem" id="tU3-ZC-P0c"/>
